@@ -54,6 +54,53 @@
             line-height: 1.6;
             font-size: 1.1em;
         }
+        
+        /* Styles for flowchart */
+        .flowchart {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .flowchart h3 {
+            text-align: center;
+            color: #005ea2;
+            margin-bottom: 20px;
+        }
+        .flowchart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flowchart-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .flowchart-node {
+            background: #007acc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .flowchart-arrow {
+            margin: 0 15px;
+            color: #007acc;
+            font-size: 1.5em;
+        }
+        .flowchart-description {
+            background: #e6f2ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex-grow: 1;
+            border-left: 3px solid #007acc;
+        }
     </style>
 </head>
 <body>
@@ -68,12 +115,64 @@
     <main>
         <h2>Rangkuman Materi Panel Hosting</h2>
         <div class="content">
+            <img src="2026.jpg" alt="Contoh Panel Hosting" />
             <p>
             Materi control panel hosting mencakup pengertian (antarmuka grafis untuk mengelola hosting), 
             fungsi (manajemen file, email, domain, basis data), fitur utama (unggah file, email, database, keamanan), 
             jenis-jenisnya (cPanel, Plesk, DirectAdmin), dan keuntungannya (kemudahan penggunaan, efisiensi, menghemat waktu). 
             </p>
-            <img src="https://cdn.pixabay.com/photo/2018/04/19/17/40/control-panel-3336815_960_720.jpg" alt="Contoh Panel Hosting" />
+            
+            <!-- Flowchart for cPanel functions -->
+            <div class="flowchart">
+                <h3>Flowchart Fungsi cPanel</h3>
+                <div class="flowchart-container">
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Login cPanel</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Pengguna mengakses cPanel dengan kredensial login</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Dashboard</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Tampilan utama dengan berbagai opsi manajemen</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Manajemen File</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Mengelola file website melalui File Manager atau FTP</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Manajemen Domain</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Mengatur domain, subdomain, dan pengalihan</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Manajemen Database</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Membuat dan mengelola database MySQL melalui phpMyAdmin</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Manajemen Email</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Membuat akun email, forwarder, dan pengaturan spam</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Keamanan</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Konfigurasi SSL, firewall, dan pengaturan keamanan lainnya</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Backup</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Membuat dan mengelola backup website</div>
+                    </div>
+                    <div class="flowchart-item">
+                        <div class="flowchart-node">Statistik</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-description">Memantau traffic, penggunaan resource, dan log akses</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
