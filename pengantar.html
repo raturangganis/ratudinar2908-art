@@ -54,6 +54,40 @@
             line-height: 1.6;
             font-size: 1.1em;
         }
+        
+        /* Gaya untuk tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        th {
+            background-color: #007acc;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-weight: bold;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        tr:hover {
+            background-color: #eef5ff;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .table-caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #005ea2;
+        }
     </style>
 </head>
 <body>
@@ -68,13 +102,59 @@
     <main>
         <h2>Pengantar Hosting</h2>
         <div class="content">
+            <img src="2027.png" alt="Ilustrasi Hosting" />
             <p>
                 Hosting adalah layanan penyimpanan data dan file website di server agar dapat diakses melalui internet. Dengan hosting, sebuah website bisa online dan dapat diakses oleh siapa saja kapan saja.
             </p>
             <p>
                 Ada berbagai jenis hosting seperti shared hosting, VPS, dan dedicated server. Pilihan hosting tergantung pada kebutuhan dan budget.
             </p>
-            <img src="https://cdn.pixabay.com/photo/2017/02/01/18/07/server-2036330_960_720.jpg" alt="Ilustrasi Hosting" />
+            
+            <div class="table-container">
+                <div class="table-caption">Fungsi Utama Hosting</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fungsi</th>
+                            <th>Deskripsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Penyimpanan Data</td>
+                            <td>Menyediakan ruang penyimpanan untuk file website seperti HTML, CSS, JavaScript, gambar, dan database</td>
+                        </tr>
+                        <tr>
+                            <td>Akses Online</td>
+                            <td>Memungkinkan website dapat diakses secara online melalui internet oleh pengguna di seluruh dunia</td>
+                        </tr>
+                        <tr>
+                            <td>Keamanan Data</td>
+                            <td>Menyediakan perlindungan terhadap serangan malware, DDoS, dan akses tidak sah ke data website</td>
+                        </tr>
+                        <tr>
+                            <td>Backup & Recovery</td>
+                            <td>Menyediakan layanan backup data secara berkala dan pemulihan data jika terjadi masalah</td>
+                        </tr>
+                        <tr>
+                            <td>Email Hosting</td>
+                            <td>Menyediakan layanan email profesional dengan nama domain sendiri (contoh: nama@perusahaananda.com)</td>
+                        </tr>
+                        <tr>
+                            <td>Database Management</td>
+                            <td>Mendukung berbagai sistem database seperti MySQL, PostgreSQL untuk menyimpan data dinamis website</td>
+                        </tr>
+                        <tr>
+                            <td>Domain & DNS</td>
+                            <td>Mengelola nama domain dan sistem DNS (Domain Name System) untuk mengarahkan domain ke server hosting</td>
+                        </tr>
+                        <tr>
+                            <td>Scalability</td>
+                            <td>Memungkinkan peningkatan kapasitas resource (CPU, RAM, storage) sesuai pertumbuhan kebutuhan website</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 </body>
