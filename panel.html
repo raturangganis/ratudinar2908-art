@@ -55,51 +55,38 @@
             font-size: 1.1em;
         }
         
-        /* Styles for flowchart */
-        .flowchart {
-            margin: 30px 0;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .flowchart h3 {
-            text-align: center;
-            color: #005ea2;
-            margin-bottom: 20px;
-        }
-        .flowchart-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .flowchart-item {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
+        /* Gaya untuk tabel */
+        table {
             width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
-        .flowchart-node {
-            background: #007acc;
+        th {
+            background-color: #007acc;
             color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
+            text-align: left;
+            padding: 15px;
             font-weight: bold;
-            min-width: 150px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-        .flowchart-arrow {
-            margin: 0 15px;
-            color: #007acc;
-            font-size: 1.5em;
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .flowchart-description {
-            background: #e6f2ff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            flex-grow: 1;
-            border-left: 3px solid #007acc;
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        tr:hover {
+            background-color: #eef5ff;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .table-caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #005ea2;
         }
     </style>
 </head>
@@ -122,56 +109,50 @@
             jenis-jenisnya (cPanel, Plesk, DirectAdmin), dan keuntungannya (kemudahan penggunaan, efisiensi, menghemat waktu). 
             </p>
             
-            <!-- Flowchart for cPanel functions -->
-            <div class="flowchart">
-                <h3>Flowchart Fungsi cPanel</h3>
-                <div class="flowchart-container">
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Login cPanel</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Pengguna mengakses cPanel dengan kredensial login</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Dashboard</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Tampilan utama dengan berbagai opsi manajemen</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Manajemen File</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Mengelola file website melalui File Manager atau FTP</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Manajemen Domain</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Mengatur domain, subdomain, dan pengalihan</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Manajemen Database</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Membuat dan mengelola database MySQL melalui phpMyAdmin</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Manajemen Email</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Membuat akun email, forwarder, dan pengaturan spam</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Keamanan</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Konfigurasi SSL, firewall, dan pengaturan keamanan lainnya</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Backup</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Membuat dan mengelola backup website</div>
-                    </div>
-                    <div class="flowchart-item">
-                        <div class="flowchart-node">Statistik</div>
-                        <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-description">Memantau traffic, penggunaan resource, dan log akses</div>
-                    </div>
-                </div>
+            <div class="table-container">
+                <div class="table-caption">Fungsi Utama cPanel</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fungsi</th>
+                            <th>Deskripsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manajemen File</td>
+                            <td>Mengelola file website melalui File Manager, FTP Accounts, dan Backup Wizard</td>
+                        </tr>
+                        <tr>
+                            <td>Manajemen Domain</td>
+                            <td>Mengatur domain, subdomain, addon domain, dan pengaturan DNS</td>
+                        </tr>
+                        <tr>
+                            <td>Manajemen Email</td>
+                            <td>Membuat akun email, forwarder, autoresponder, dan pengaturan spam filter</td>
+                        </tr>
+                        <tr>
+                            <td>Manajemen Database</td>
+                            <td>Membuat dan mengelola database MySQL, phpMyAdmin untuk administrasi</td>
+                        </tr>
+                        <tr>
+                            <td>Keamanan</td>
+                            <td>Mengatur SSL/TLS, IP Blocker, SSH Access, dan Hotlink Protection</td>
+                        </tr>
+                        <tr>
+                            <td>Statistik & Log</td>
+                            <td>Memantau traffic website, error logs, bandwidth, dan resource usage</td>
+                        </tr>
+                        <tr>
+                            <td>Software & Services</td>
+                            <td>Instalasi aplikasi (WordPress, Joomla), PHP version selector, Cron Jobs</td>
+                        </tr>
+                        <tr>
+                            <td>Pengguna & Privileges</td>
+                            <td>Mengelola user accounts, permissions, dan akses ke berbagai fitur cPanel</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
